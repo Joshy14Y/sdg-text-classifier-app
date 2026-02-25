@@ -16,7 +16,7 @@ class ModelLoader:
             return pickle.load(f)
 
     def _load_labels(self):
-        with open(self.labels_path, "rb") as f:
+        with open(self.labels_path, "r") as f:
             return json.load(f)
 
     def predict(self, text: str) -> str:
